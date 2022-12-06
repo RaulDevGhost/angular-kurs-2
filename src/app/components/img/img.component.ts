@@ -31,8 +31,8 @@ export class ImgComponent
   @Input() alt: string = '';
   @Output() loaded = new EventEmitter<string>();
   imgEmpy: string = 'assets/images/empty.jpeg';
-  counter: number = 0;
-  counterInterval: number | undefined;
+  // counter: number = 0;
+  // counterInterval: number | undefined;
 
   constructor() {
     //before render
@@ -54,10 +54,10 @@ export class ImgComponent
     // FETCH -- API CALLS
     // runs once time
     console.log('hello ngOnInit');
-    this.counterInterval = window.setInterval(() => {
-      this.counter += 1;
-      console.log('counter oninit--->', this.counter);
-    }, 1000);
+    // this.counterInterval = window.setInterval(() => {
+    //   this.counter += 1;
+    //   console.log('counter oninit--->', this.counter);
+    // }, 1000);
   }
 
   ngAfterViewInit(): void {
@@ -69,7 +69,7 @@ export class ImgComponent
   ngOnDestroy(): void {
     //delete render
     console.log('hello ngOnDestroy');
-    window.clearInterval(this.counterInterval);
+    //window.clearInterval(this.counterInterval);
   }
 
   errorImg() {
