@@ -25,7 +25,7 @@ export class ImgComponent
     //this is only to listen changes in one specific input
     //because ngOnChanges you listen all the inputs
     this.img = newImg;
-    console.log('change just one input img', this.img);
+    //console.log('change just one input img', this.img);
     //code
   }
   @Input() alt: string = '';
@@ -38,22 +38,22 @@ export class ImgComponent
     //before render
     //NO ASYNC ACTIONS
     //RUNS once
-    console.log('hello constructor->', this.img);
+    //console.log('hello constructor->', this.img);
   }
 
   ngOnChanges(changes: SimpleChanges): void {
     //before render
     //changes inputs
     //RUNS the times inputs change
-    console.log('hello ngOnChanges->', this.img);
-    console.log('simplechange ->', changes);
+    // console.log('hello ngOnChanges->', this.img);
+    // console.log('simplechange ->', changes);
   }
 
   ngOnInit(): void {
     //before render
     // FETCH -- API CALLS
     // runs once time
-    console.log('hello ngOnInit');
+    //console.log('hello ngOnInit');
     // this.counterInterval = window.setInterval(() => {
     //   this.counter += 1;
     //   console.log('counter oninit--->', this.counter);
@@ -63,12 +63,12 @@ export class ImgComponent
   ngAfterViewInit(): void {
     //after render
     //handler children
-    console.log('hello ngAfterViewInit');
+    //console.log('hello ngAfterViewInit');
   }
 
   ngOnDestroy(): void {
     //delete render
-    console.log('hello ngOnDestroy');
+    //console.log('hello ngOnDestroy');
     //window.clearInterval(this.counterInterval);
   }
 
@@ -77,7 +77,7 @@ export class ImgComponent
   }
 
   loadedImg() {
-    console.log('loaded child');
+    //console.log('loaded child');
     this.loaded.emit(this.imgEmpy);
   }
 }

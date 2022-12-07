@@ -8,13 +8,19 @@ import { Product } from '../../models/product.model';
 })
 export class ProductComponent implements OnInit {
   @Input() product: Product = {
-    id: '',
-    name: '',
+    id: 0,
     image: '',
     price: 0,
+    category: '',
+    rating: {
+      count: 0,
+      rate: 0,
+    },
+    title: '',
+    description: '',
   };
   @Output() addProduct = new EventEmitter<Product>();
-  test = 'testing';
+  today = new Date();
 
   constructor() {}
 
