@@ -18,7 +18,7 @@ import {
 export class ImgComponent
   implements OnInit, OnChanges, AfterViewInit, OnDestroy
 {
-  img: string = 'hello';
+  img = 'hello';
 
   @Input('img')
   set changeImg(newImg: string) {
@@ -28,9 +28,9 @@ export class ImgComponent
     //console.log('change just one input img', this.img);
     //code
   }
-  @Input() alt: string = '';
+  @Input() alt = '';
   @Output() loaded = new EventEmitter<string>();
-  imgEmpy: string = 'assets/images/empty.jpeg';
+  imgEmpy = 'assets/images/empty.jpeg';
   // counter: number = 0;
   // counterInterval: number | undefined;
 

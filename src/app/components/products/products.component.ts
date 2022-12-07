@@ -9,7 +9,7 @@ import { ProductsService } from '../../services/products.service';
   styleUrls: ['./products.component.scss'],
 })
 export class ProductsComponent implements OnInit {
-  total: number = 0;
+  total = 0;
   productsFetchAll: Product[] = [];
   shopingCart: Product[] = [];
   products: Product[] = [];
