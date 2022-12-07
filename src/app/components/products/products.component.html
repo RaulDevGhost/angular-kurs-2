@@ -1,5 +1,6 @@
 <div class="products--grid">
   <app-product
+    (addProduct)="addingCart($event)"
     [product]="product"
     *ngFor="let product of products"
   ></app-product>
