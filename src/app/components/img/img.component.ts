@@ -1,23 +1,11 @@
-import {
-  Component,
-  OnInit,
-  Input,
-  Output,
-  EventEmitter,
-  OnChanges,
-  AfterViewInit,
-  OnDestroy,
-  SimpleChanges,
-} from '@angular/core';
+import { Component, Input, Output, EventEmitter } from '@angular/core';
 
 @Component({
   selector: 'app-img',
   templateUrl: './img.component.html',
   styleUrls: ['./img.component.scss'],
 })
-export class ImgComponent
-  implements OnInit, OnChanges, AfterViewInit, OnDestroy
-{
+export class ImgComponent {
   img = 'hello';
 
   @Input('img')
@@ -41,36 +29,36 @@ export class ImgComponent
     //console.log('hello constructor->', this.img);
   }
 
-  ngOnChanges(changes: SimpleChanges): void {
-    //before render
-    //changes inputs
-    //RUNS the times inputs change
-    // console.log('hello ngOnChanges->', this.img);
-    // console.log('simplechange ->', changes);
-  }
+  // ngOnChanges(changes: SimpleChanges): void {
+  //   //before render
+  //   //changes inputs
+  //   //RUNS the times inputs change
+  //   // console.log('hello ngOnChanges->', this.img);
+  //   // console.log('simplechange ->', changes);
+  // }
 
-  ngOnInit(): void {
-    //before render
-    // FETCH -- API CALLS
-    // runs once time
-    //console.log('hello ngOnInit');
-    // this.counterInterval = window.setInterval(() => {
-    //   this.counter += 1;
-    //   console.log('counter oninit--->', this.counter);
-    // }, 1000);
-  }
+  // ngOnInit(): void {
+  //   //before render
+  //   // FETCH -- API CALLS
+  //   // runs once time
+  //   //console.log('hello ngOnInit');
+  //   // this.counterInterval = window.setInterval(() => {
+  //   //   this.counter += 1;
+  //   //   console.log('counter oninit--->', this.counter);
+  //   // }, 1000);
+  // }
 
-  ngAfterViewInit(): void {
-    //after render
-    //handler children
-    //console.log('hello ngAfterViewInit');
-  }
+  // ngAfterViewInit(): void {
+  //   //after render
+  //   //handler children
+  //   //console.log('hello ngAfterViewInit');
+  // }
 
-  ngOnDestroy(): void {
-    //delete render
-    //console.log('hello ngOnDestroy');
-    //window.clearInterval(this.counterInterval);
-  }
+  // ngOnDestroy(): void {
+  //   //delete render
+  //   //console.log('hello ngOnDestroy');
+  //   //window.clearInterval(this.counterInterval);
+  // }
 
   errorImg() {
     this.img = this.imgEmpy;

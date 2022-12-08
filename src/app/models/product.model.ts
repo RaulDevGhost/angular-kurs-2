@@ -1,12 +1,25 @@
+interface Catergoy {
+  id: number;
+  name: string;
+  typeImg: string;
+}
+
 export interface Product {
-  id: string | number;
-  image: string;
+  id: number;
+  images: string[];
   price: number;
-  category: string;
-  rating: {
+  rating?: {
     count: number;
     rate: number;
   };
   title: string;
   description?: string;
+  category: Catergoy;
 }
+
+export interface CreateProductDTO extends Omit<Product, 'id' | 'category'> {
+  categoryId: number;
+}
+
+// eslint-disable-next-line @typescript-eslint/no-empty-interface
+export interface UpdateProductDTO extends Partial<CreateProductDTO> {}
